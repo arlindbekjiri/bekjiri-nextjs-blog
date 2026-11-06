@@ -10,8 +10,7 @@ export type FormState = { error?: string };
 
 const FILE = path.join(process.cwd(), "content", "posts.json");
 
-// Legt einen Beitrag in content/posts.json an.
-// ponytail: kein Login – jeder POST kann schreiben. Lokal ok, für echte Nutzung Auth + DB/CMS.
+// Kein Login, jeder kann schreiben. Ist nur für lokal gedacht.
 export async function createPost(_prev: FormState, formData: FormData): Promise<FormState> {
   const title = String(formData.get("title") ?? "").trim().slice(0, 100);
   const body = String(formData.get("body") ?? "").trim().slice(0, 5000);
