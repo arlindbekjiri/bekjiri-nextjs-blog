@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // URLs wie /blog/ und /blog/warum-nextjs/ (gleich wie beim Gatsby-Blog)
+  trailingSlash: true,
   cacheComponents: true,
   partialPrefetching: true,
   turbopack: {
