@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "warum-nextjs",
+    "title": "Warum Next.js?",
+    "date": "2026-11-06",
+    "body": "Next.js ist ein React-Framework von Vercel. Es nimmt mir viele Entscheidungen ab: Routing, Rendering, Bundling und Optimierung sind schon eingebaut.\n\nIch schreibe normale React-Komponenten. Next.js entscheidet pro Seite, ob sie beim Build fertig gerendert wird oder erst bei der Anfrage auf dem Server.\n\nFür diesen Blog heisst das: Die Seiten sind statisch und kommen direkt vom CDN."
+  },
+  {
+    "slug": "app-router",
+    "title": "Der App Router",
+    "date": "2026-11-06",
+    "body": "Im App Router ist jeder Ordner in app/ ein Teil der URL. Eine Datei page.tsx macht den Ordner zu einer Seite.\n\nlayout.tsx umschliesst alle Seiten darunter. So steht die Navigation nur einmal im Code.\n\nEckige Klammern wie [slug] machen ein dynamisches Segment. Daraus entstehen die Detailseiten dieses Blogs."
+  },
+  {
+    "slug": "server-components",
+    "title": "Server Components",
+    "date": "2026-11-06",
+    "body": "Komponenten im App Router sind standardmässig Server Components. Sie laufen nur auf dem Server und schicken kein eigenes JavaScript in den Browser.\n\nDarum kann eine Seite direkt Dateien lesen. Dieser Blog liest seine Beiträge aus einer JSON-Datei im Repository.\n\nNur wo es Interaktivität braucht, zum Beispiel beim Formular, kommt mit 'use client' eine Client Component dazu."
+  },
+  {
+    "slug": "server-actions",
+    "title": "Server Actions",
+    "date": "2026-11-06",
+    "body": "Mit einer Server Action schickt ein Formular seine Daten direkt an eine Funktion auf dem Server. Eine eigene API-Route braucht es dafür nicht.\n\nDas Formular unter «Neuer Beitrag» nutzt genau das. Lokal schreibt die Action den Beitrag in die JSON-Datei.\n\nAuf Vercel ist das Dateisystem schreibgeschützt. Dort zeigt das Formular deshalb eine Fehlermeldung."
+  }
+]
